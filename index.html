@@ -99,6 +99,8 @@
   .btn:active{transform:translateY(-1px) scale(.98)}
   .btn-solid{background:var(--orange);color:#fff}
   .btn-solid:hover{background:var(--orange-deep)}
+  .btn-resume{background:var(--cream);color:var(--ink);border:1px solid var(--cream)}
+  .btn-resume:hover{background:var(--orange);border-color:var(--orange);color:#fff}
   .btn-ghost{border:1px solid var(--line-dark);color:var(--cream)}
   .btn-ghost:hover{border-color:var(--cream)}
   @media (max-width:860px){
@@ -188,6 +190,12 @@
   .work-item .feat span{border:1px solid var(--line-light);border-radius:999px;padding:5px 12px;font-size:.8rem;font-weight:500}
   .work-item .wlink{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);border-radius:999px;padding:11px 18px;white-space:nowrap;transition:background .2s,color .2s;margin-top:6px}
   .work-item .wlink:hover{background:var(--ink);color:var(--cream)}
+  .work-item .wlinks{display:flex;flex-direction:column;gap:10px;align-items:stretch;margin-top:6px}
+  .work-item .wlinks .wlink{margin-top:0;text-align:center}
+  .work-item .wlink.primary{background:var(--ink);color:var(--cream)}
+  .work-item .wlink.primary:hover{background:var(--orange-deep);border-color:var(--orange-deep)}
+  .archive-row .alink{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);border-radius:999px;padding:7px 13px;white-space:nowrap;transition:background .2s,color .2s}
+  .archive-row .alink:hover{background:var(--ink);color:var(--cream)}
   @media (max-width:760px){ .work-item{grid-template-columns:1fr} .work-item .wno{padding-top:0} }
   .archive{margin-top:clamp(40px,5vw,60px)}
   .archive h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange-deep);margin:0 0 8px}
@@ -356,6 +364,7 @@
         </div>
         <div class="hero-cta">
           <a class="btn btn-solid" href="#work">View Projects ↓</a>
+          <a class="btn btn-resume" href="#contact">Download Resume ↓</a>
           <a class="btn btn-ghost" href="#journey">Experience &amp; Education</a>
         </div>
       </div>
@@ -404,7 +413,7 @@
 
     <div class="stats rv">
       <div class="stat">
-        <div class="num"><span data-count="6">0</span></div>
+        <div class="num"><span data-count="8">0</span></div>
         <p>Projects designed, built and deployed end to end</p>
       </div>
       <div class="stat">
@@ -524,7 +533,10 @@
         </div>
         <div class="stack">React 19 · Vite · Node.js · Express 5 · PostgreSQL · JWT</div>
       </div>
-      <a class="wlink" href="https://campuscode.co.in" target="_blank" rel="noopener">Visit ↗</a>
+      <div class="wlinks">
+        <a class="wlink primary" href="https://campuscode.co.in" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a class="wlink" href="https://github.com/Koushikthatipelli" target="_blank" rel="noopener">GitHub Profile ↗</a>
+      </div>
     </article>
 
     <article class="work-item rv">
@@ -537,15 +549,17 @@
         </div>
         <div class="stack">Next.js · TypeScript · Tailwind CSS · Supabase</div>
       </div>
-      <span></span>
+      <div class="wlinks">
+        <a class="wlink" href="https://github.com/Koushikthatipelli" target="_blank" rel="noopener">GitHub Profile ↗</a>
+      </div>
     </article>
 
     <div class="archive rv">
       <h4>Additional projects</h4>
-      <div class="archive-row"><span class="t">CuraOne</span><span class="d">Healthcare platform consolidating patient services into a single interface.</span><span class="s">Web Application</span></div>
-      <div class="archive-row"><span class="t">Roadmap.io</span><span class="d">Learning roadmap tool that converts a goal into a structured, step-by-step plan.</span><span class="s">Web Application</span></div>
-      <div class="archive-row"><span class="t">OneDesk</span><span class="d">Unified workspace for everyday productivity and task management.</span><span class="s">Web Application</span></div>
-      <div class="archive-row"><span class="t">Secure Online Voting System</span><span class="d">Voting system with authentication and tamper-resistant ballot handling.</span><span class="s">Web Application</span></div>
+      <div class="archive-row"><span class="t">CuraOne</span><span class="d">Healthcare platform consolidating patient services into a single interface.</span><span class="s">React · Node.js · MongoDB</span><a class="alink" href="https://github.com/Koushikthatipelli" target="_blank" rel="noopener">View on GitHub profile ↗</a></div>
+      <div class="archive-row"><span class="t">Roadmap.io</span><span class="d">Learning roadmap tool that converts a goal into a structured, step-by-step plan.</span><span class="s">React · JavaScript · REST APIs</span><a class="alink" href="https://github.com/Koushikthatipelli" target="_blank" rel="noopener">View on GitHub profile ↗</a></div>
+      <div class="archive-row"><span class="t">OneDesk</span><span class="d">Unified workspace for everyday productivity and task management.</span><span class="s">React · Node.js · Express</span><a class="alink" href="https://github.com/Koushikthatipelli" target="_blank" rel="noopener">View on GitHub profile ↗</a></div>
+      <div class="archive-row"><span class="t">Secure Online Voting System</span><span class="d">Voting system with authentication and tamper-resistant ballot handling.</span><span class="s">Node.js · Express · JWT Auth</span><a class="alink" href="https://github.com/Koushikthatipelli" target="_blank" rel="noopener">View on GitHub profile ↗</a></div>
     </div>
   </div>
 </section>
@@ -600,15 +614,15 @@
       </div>
       <div class="tl-row rv">
         <div class="tl-when">May – Jul 2026</div><span class="tl-dot"></span>
-        <div class="tl-body"><span class="kind">Experience</span><h3>Full-Stack Development Intern — NeoSkillZ</h3><p>Built production full-stack features across frontend, backend and database layers.</p></div>
+        <div class="tl-body"><span class="kind">Experience</span><h3>Full-Stack Development Intern — NeoSkillZ</h3><p>Built production full-stack features across frontend, backend and database layers, working with React, Node.js and REST APIs. One of 3 internships completed in 2026.</p></div>
       </div>
       <div class="tl-row rv">
         <div class="tl-when">Jun 2026</div><span class="tl-dot"></span>
-        <div class="tl-body"><span class="kind">Experience</span><h3>AI Web Development Intern — InAmigo Foundation</h3><p>Developed AI-enabled web features for foundation programmes.</p></div>
+        <div class="tl-body"><span class="kind">Experience</span><h3>AI Web Development Intern — InAmigo Foundation</h3><p>Developed AI-enabled web features for foundation programmes. One of 3 internships completed in 2026, alongside full-stack and backend roles.</p></div>
       </div>
       <div class="tl-row rv">
         <div class="tl-when">Jun 2026</div><span class="tl-dot"></span>
-        <div class="tl-body"><span class="kind">Experience</span><h3>Backend Developer — Aadhi Foundation × Teachwell</h3><p>Worked on backend development, including APIs and server-side logic.</p></div>
+        <div class="tl-body"><span class="kind">Experience</span><h3>Backend Developer — Aadhi Foundation × Teachwell</h3><p>Worked on backend development, including REST APIs, server-side logic and database handling. One of 3 internships completed in 2026.</p></div>
       </div>
       <div class="tl-row rv">
         <div class="tl-when">2026</div><span class="tl-dot"></span>
@@ -666,9 +680,10 @@
   <div class="wrap">
     <span class="mono">№ 09 — The Next Chapter</span>
     <h2>Open to <em>full-time opportunities.</em></h2>
-    <p>Seeking a full-time Full Stack Developer role with a team building production products. Core strengths include React, Node.js, PostgreSQL, REST API development and deployment. Available for discussion via email, phone, LinkedIn or GitHub.</p>
+    <p>Seeking a full-time Full Stack Developer role with a team building production products. Core strengths include React, Node.js, PostgreSQL, REST API development and deployment. Available for discussion via email, phone, LinkedIn or GitHub — resume shared on request via email.</p>
     <div class="next-links">
-      <a class="fill" href="mailto:koushikthatipelli@gmail.com">koushikthatipelli@gmail.com</a>
+      <a class="fill" href="#contact">Download Resume ↓</a>
+      <a href="mailto:koushikthatipelli@gmail.com">koushikthatipelli@gmail.com</a>
       <a href="tel:+919390981629">+91 93909 81629</a>
       <a href="https://www.linkedin.com/in/koushikthatipelli" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a href="https://github.com/Koushikthatipelli" target="_blank" rel="noopener">GitHub ↗</a>
